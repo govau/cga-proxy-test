@@ -1,0 +1,10 @@
+---
+applications:
+- name: cc-test-ae
+  buildpacks: [go_buildpack]
+  env:
+    GOPACKAGENAME: main
+  services:
+  - proxy_ups
+  command: ./scripts/run.sh
+  instances: 2
